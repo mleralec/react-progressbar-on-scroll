@@ -19,7 +19,7 @@ const ProgressBar: React.FC<Props> = ({
 
     useEffect(() => {
         document.addEventListener('scroll', updateProgressBar)
-
+        updateProgressBar()
         return () => document.removeEventListener('scroll', updateProgressBar)
     }, [])
 
@@ -45,13 +45,12 @@ const getStyle: Function = (
         position: 'fixed' as 'fixed',
         left: 0,
         right: 0,
-        width: '100%',
         height,
-        transition: 'all 4s',
+        zIndex: 999,
         background: `linear-gradient(to ${direction}, ${color} ${scroll}%, transparent 0)`,
     }
 
-    position === 'top' ? (style.top = 0) : (style.bottom = 0)
+    position === 'top' ? style.top = 0 : style.bottom = 0
 
     return style
 }
