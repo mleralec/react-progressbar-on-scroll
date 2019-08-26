@@ -3,13 +3,25 @@
   "version": "1.0.0",
   "description": "Progress bar on scroll, React component",
   "main": "dist/index.js",
+  "config": {
+    "component": "ProgressBar",
+    "externals": {
+      "react": "React"
+    }
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "rollup -c rollup.config.js"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": [
+    "component",
+    "react-component",
+    "react",
+    "progress bar",
+    "scroll"
+  ],
+  "author": "Mickael Le Ralec",
+  "license": "MIT",
   "peerDependencies": {
     "react": "^16.9.0"
   },
