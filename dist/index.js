@@ -1,0 +1,1 @@
+!function(e,t){"use strict";e=e&&e.hasOwnProperty("default")?e.default:e;(t=t&&t.hasOwnProperty("default")?t.default:t).render(e.createElement(function(){return e.createElement("div",null,"Hello World!")},null),document.getElementById("root"))}(React,ReactDOM);
