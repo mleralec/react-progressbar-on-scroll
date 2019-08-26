@@ -1,7 +1,7 @@
-import resolve from 'rollup-plugin-node-resolve';
-import babel from 'rollup-plugin-babel';
-import commonjs from 'rollup-plugin-commonjs';
-import typescript from 'rollup-plugin-typescript';
+import resolve from 'rollup-plugin-node-resolve'
+import babel from 'rollup-plugin-babel'
+import commonjs from 'rollup-plugin-commonjs'
+import typescript from 'rollup-plugin-typescript'
 import { terser } from 'rollup-plugin-terser'
 
 export default {
@@ -12,7 +12,7 @@ export default {
         globals: {
             react: 'React',
         },
-        format: 'cjs' // for npm module (use with import/require)
+        format: 'cjs', // for npm module (use with import/require)
         // format: 'iife' // for browser (use with React CDN)
         // format: 'umd' // for both
     },
@@ -21,9 +21,7 @@ export default {
         babel({ exclude: 'node_modules/**' }),
         typescript(),
         terser(),
-        commonjs()
+        commonjs(),
     ],
-    external: [
-        'react' 
-    ]
-};
+    external: ['react'],
+}

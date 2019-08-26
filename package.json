@@ -13,6 +13,10 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "rollup -c rollup.config.js"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mleralec/react-progressbar-on-scroll"
+  },
   "keywords": [
     "component",
     "react-component",
@@ -22,6 +26,10 @@
   ],
   "author": "Mickael Le Ralec",
   "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mleralec/react-progressbar-on-scroll/issues"
+  },
+  "homepage": "https://github.com/mleralec/react-progressbar-on-scroll#readme",
   "peerDependencies": {
     "react": "^16.9.0"
   },

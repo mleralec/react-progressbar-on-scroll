@@ -1,16 +1,13 @@
 {
-  "compilerOptions": {
-    "target": "es5",
-    "module": "ES2015",
-    "jsx": "react",
-    "declaration": true,
-    "declarationDir": "./dist",
-    "outDir": "./dist",
-    "allowSyntheticDefaultImports": true,
-    "moduleResolution": "node"
-  },
-  "include": [
-    "src"
-  ]
+    "compilerOptions": {
+        "target": "es5",
+        "module": "ES2015",
+        "jsx": "react",
+        "declaration": true,
+        "declarationDir": "./dist",
+        "outDir": "./dist",
+        "allowSyntheticDefaultImports": true,
+        "moduleResolution": "node"
+    },
+    "include": ["src"]
 }
-  

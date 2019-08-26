@@ -1,4 +1,4 @@
-import React, { useState, useEffect} from 'react'
+import React, { useState, useEffect } from 'react'
 
 type Direction = 'right' | 'left'
 type Position = 'top' | 'bottom'
@@ -9,32 +9,31 @@ type Props = {
     position?: Position
 }
 
-const ProgressBar: React.FC<Props> = ({ 
-    color = '#1ce', 
+const ProgressBar: React.FC<Props> = ({
+    color = '#1ce',
     height = 4,
     direction = 'right',
-    position = 'top'
+    position = 'top',
 }) => {
     const [scroll, setScroll] = useState(0)
 
     useEffect(() => {
         document.addEventListener('scroll', updateProgressBar)
-        
+
         return () => document.removeEventListener('scroll', updateProgressBar)
     }, [])
 
     const updateProgressBar = () => {
-        const windowHeight = document.documentElement.offsetHeight - window.innerHeight
+        const windowHeight =
+            document.documentElement.offsetHeight - window.innerHeight
         requestAnimationFrame(() => {
-            setScroll(Math.floor(window.pageYOffset / windowHeight * 100))
+            setScroll(Math.floor((window.pageYOffset / windowHeight) * 100))
         })
     }
 
-    return (
-        <div style={getStyle(scroll, color, height, direction, position)} />
-        )
+    return <div style={getStyle(scroll, color, height, direction, position)} />
 }
-    
+
 const getStyle: Function = (
     scroll: number,
     color: string,
@@ -49,10 +48,10 @@ const getStyle: Function = (
         width: '100%',
         height,
         transition: 'all 4s',
-        background: `linear-gradient(to ${direction}, ${color} ${scroll}%, transparent 0)`
+        background: `linear-gradient(to ${direction}, ${color} ${scroll}%, transparent 0)`,
     }
 
-    position === 'top' ? style.top = 0 : style.bottom = 0
+    position === 'top' ? (style.top = 0) : (style.bottom = 0)
 
     return style
 }
