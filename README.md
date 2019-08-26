@@ -1,3 +1,3 @@
-# react-scroll-progressbar
+# react-progressbar-on-scroll
 
 Progress bar on scroll React component

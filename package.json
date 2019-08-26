@@ -1,5 +1,5 @@
 {
-  "name": "react-scroll-progressbar",
+  "name": "react-progressbar-on-scroll",
   "version": "1.0.0",
   "description": "Progress bar on scroll, React component",
   "main": "dist/index.js",
