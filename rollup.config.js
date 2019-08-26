@@ -5,15 +5,15 @@ import typescript from 'rollup-plugin-typescript';
 import { terser } from 'rollup-plugin-terser'
 
 export default {
-    input: 'src/index.tsx',
+    input: 'src/ProgressBar.tsx',
     output: {
         file: 'dist/index.js',
+        name: 'index',
         globals: {
             react: 'React',
-            'react-dom': 'ReactDOM'
         },
-        format: 'iife' // for browser (use with React CDN)
-        // format: 'cjs' // for npm module (use with import/require)
+        format: 'cjs' // for npm module (use with import/require)
+        // format: 'iife' // for browser (use with React CDN)
         // format: 'umd' // for both
     },
     plugins: [
@@ -24,7 +24,6 @@ export default {
         commonjs()
     ],
     external: [
-        'react', 
-        'react-dom'
+        'react' 
     ]
 };
