@@ -6,6 +6,8 @@ declare type Props = {
     height?: number;
     direction?: Direction;
     position?: Position;
+    gradient?: boolean;
+    gradientColor?: string;
 };
 declare const ProgressBar: React.FC<Props>;
 export default ProgressBar;

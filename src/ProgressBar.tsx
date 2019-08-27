@@ -7,6 +7,8 @@ type Props = {
     height?: number
     direction?: Direction
     position?: Position
+    gradient?: boolean
+    gradientColor?: string
 }
 
 const ProgressBar: React.FC<Props> = ({
@@ -14,6 +16,8 @@ const ProgressBar: React.FC<Props> = ({
     height = 4,
     direction = 'right',
     position = 'top',
+    gradient = false,
+    gradientColor = 'yellow',
 }) => {
     const [scroll, setScroll] = useState(0)
 
@@ -31,7 +35,19 @@ const ProgressBar: React.FC<Props> = ({
         })
     }
 
-    return <div style={getStyle(scroll, color, height, direction, position)} />
+    return (
+        <div
+            style={getStyle(
+                scroll,
+                color,
+                height,
+                direction,
+                position,
+                gradient,
+                gradientColor
+            )}
+        />
+    )
 }
 
 const getStyle: Function = (
@@ -39,7 +55,9 @@ const getStyle: Function = (
     color: string,
     height: number,
     direction: Direction,
-    position: Position
+    position: Position,
+    gradient: boolean,
+    gradientColor: string
 ) => {
     const style: React.CSSProperties = {
         position: 'fixed' as 'fixed',
@@ -47,10 +65,14 @@ const getStyle: Function = (
         right: 0,
         height,
         zIndex: 999,
-        background: `linear-gradient(to ${direction}, ${color} ${scroll}%, transparent 0)`,
     }
 
-    position === 'top' ? style.top = 0 : style.bottom = 0
+    style.background = gradient
+        ? `linear-gradient(to ${direction}, ${color} ${scroll /
+              2}%,${gradientColor} ${scroll}%, transparent 0)`
+        : `linear-gradient(to ${direction}, ${color} ${scroll}%, transparent 0)`
+
+    position === 'top' ? (style.top = 0) : (style.bottom = 0)
 
     return style
 }
