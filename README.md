@@ -2,6 +2,9 @@
 
 Progress bar on scroll React component
 
+> live example :
+> https://codesandbox.io/s/condescending-easley-qgiyn
+
 ## Installation
 
 ```bash
