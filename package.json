@@ -1,10 +1,11 @@
 {
     "name": "react-progressbar-on-scroll",
-    "version": "1.0.2",
+    "version": "1.0.3",
     "description": "Progress bar on scroll, React component",
     "main": "dist/index.js",
     "files": [
-        "dist"
+        "dist",
+        "demo.gif"
     ],
     "config": {
         "component": "ProgressBar",

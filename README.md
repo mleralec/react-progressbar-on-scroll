@@ -1,14 +1,22 @@
-# react-progressbar-on-scroll
+# [react-progressbar-on-scroll](https://www.npmjs.com/package/react-progressbar-on-scroll)
+
+![npm bundle size](https://img.shields.io/bundlephobia/min/react-progressbar-on-scroll?style=flat-square)
+![npm peer dependency version](https://img.shields.io/npm/dependency-version/react-progressbar-on-scroll/peer/react?style=flat-square)
+![Snyk Vulnerabilities for GitHub Repo](https://img.shields.io/snyk/vulnerabilities/github/mleralec/react-progressbar-on-scroll?style=flat-square)
+![Licence](https://img.shields.io/npm/l/react-progressbar-on-scroll?style=flat-square)
 
 Progress bar on scroll React component
 
-> live example :
-> https://codesandbox.io/s/condescending-easley-qgiyn
+![demo](demo.gif)
+
+> [live example on codesandbox](https://codesandbox.io/s/condescending-easley-qgiyn)
 
 ## Installation
 
 ```bash
 npm install react-progressbar-on-scroll
+# or
+yarn add react-progressbar-on-scroll
 ```
 
 ## Usage
@@ -27,16 +35,16 @@ const App = () => (
 export default App
 ```
 
-## Options
+## Available props
 
-| key               | type         | default | required    | more...                              |
-| ----------------- | ------------ | ------- | ----------- | ------------------------------------ |
-| **color**         | `string`     | #1ce    | _optionnal_ | color of progress bar                |
-| **height**        | `number`     | 4       | _optionnal_ | height of progress bar in px         |
-| **direction**     | `right-left` | right   | _optionnal_ | towards where the progress bar fills |
-| **position**      | `top-bottom` | top     | _optionnal_ | position of progress bar in window   |
-| **gradient**      | `boolean`    | false   | _optionnal_ | activate gradient on progress bar    |
-| **gradientColor** | `string`     | yellow  | _optionnal_ | Second color of progress bar         |
+| key               | type         | default | description                          |
+| ----------------- | ------------ | ------- | ------------------------------------ |
+| **color**         | `string`     | #1ce    | color of progress bar                |
+| **height**        | `number`     | 4       | height of progress bar in px         |
+| **direction**     | `right-left` | right   | towards where the progress bar fills |
+| **position**      | `top-bottom` | top     | position of progress bar in window   |
+| **gradient**      | `boolean`    | false   | activate gradient on progress bar    |
+| **gradientColor** | `string`     | yellow  | Second color of progress bar         |
 
 ## Example
 
