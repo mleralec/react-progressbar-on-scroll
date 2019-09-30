@@ -7,8 +7,6 @@
 
 Progress bar on scroll React component
 
-![demo](demo.gif)
-
 > [live example on codesandbox](https://codesandbox.io/s/condescending-easley-qgiyn)
 
 ## Installation
