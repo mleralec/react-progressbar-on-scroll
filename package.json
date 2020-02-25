@@ -3,16 +3,7 @@
   "version": "1.1.0",
   "description": "Progress bar on scroll, React component",
   "main": "dist/index.js",
-  "files": [
-    "dist",
-    "demo.gif"
-  ],
-  "config": {
-    "component": "ProgressBar",
-    "externals": {
-      "react": "React"
-    }
-  },
+  "types": "dist/index.d.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "rollup -c"
@@ -34,6 +25,7 @@
     "url": "https://github.com/mleralec/react-progressbar-on-scroll/issues"
   },
   "homepage": "https://github.com/mleralec/react-progressbar-on-scroll#readme",
+  "dependencies": {},
   "peerDependencies": {
     "react": "^16.9.0"
   },
