@@ -1,5 +1,9 @@
 # react-progressbar-on-scroll
 
+### 1.1.0 (2021-07-21)
+
+- Fix typo in README.md
+
 ### 1.1.0 (2020-02-25)
 
 - Improve performance with ticking
