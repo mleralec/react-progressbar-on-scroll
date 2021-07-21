@@ -21,13 +21,13 @@ yarn add react-progressbar-on-scroll
 
 ```jsx
 import React from 'react'
-import ProgressBar from 'react-scroll-on-progressbar'
+import ProgressBar from 'react-progressbar-on-scroll'
 
 const App = () => (
-    <div className="app">
-        <ProgressBar />
-        <div>Your content...</div>
-    </div>
+  <div className="app">
+    <ProgressBar />
+    <div>Your content...</div>
+  </div>
 )
 
 export default App
@@ -48,12 +48,12 @@ export default App
 
 ```jsx
 <ProgressBar
-    color="#fff"
-    height={10}
-    direction="left"
-    position="bottom"
-    gradient={true}
-    gradientColor="#eee"
+  color="#fff"
+  height={10}
+  direction="left"
+  position="bottom"
+  gradient={true}
+  gradientColor="#eee"
 />
 ```
 
