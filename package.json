@@ -27,22 +27,22 @@
   "homepage": "https://github.com/mleralec/react-progressbar-on-scroll#readme",
   "dependencies": {},
   "peerDependencies": {
-    "react": "^16.9.0"
+    "react": "^16.9.0 || ^17.0.0 || ^18.0.0"
   },
   "devDependencies": {
-    "@babel/core": "^7.5.5",
-    "@babel/preset-env": "^7.5.5",
-    "@babel/preset-react": "^7.0.0",
-    "@types/react": "^16.9.2",
-    "@types/react-dom": "^16.9.0",
-    "rollup": "^1.20.2",
+    "@babel/core": "^7.18.2",
+    "@babel/preset-env": "^7.18.2",
+    "@babel/preset-react": "^7.17.12",
+    "@types/react": "^18.0.9",
+    "@types/react-dom": "^18.0.5",
+    "rollup": "^2.75.4",
     "rollup-plugin-babel": "^4.3.3",
     "rollup-plugin-commonjs": "^10.0.2",
     "rollup-plugin-node-resolve": "^5.2.0",
-    "rollup-plugin-terser": "^5.1.1",
+    "rollup-plugin-terser": "^7.0.2",
     "rollup-plugin-typescript": "^1.0.1",
-    "rollup-plugin-typescript2": "^0.23.0",
-    "tslib": "^1.10.0",
-    "typescript": "^3.5.3"
+    "rollup-plugin-typescript2": "^0.31.2",
+    "tslib": "^2.4.0",
+    "typescript": "^4.7.2"
   }
 }
