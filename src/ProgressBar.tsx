@@ -11,7 +11,7 @@ type Props = {
   gradientColor?: string
 }
 
-const ProgressBar: React.FC<Props> = ({
+export const ProgressBar: React.FC<Props> = ({
   color = '#1ce',
   height = 4,
   direction = 'right',
@@ -52,12 +52,11 @@ const ProgressBar: React.FC<Props> = ({
         top: position === 'top' ? 0 : 'unset',
         bottom: position === 'bottom' ? 0 : 'unset',
         background: gradient
-          ? `linear-gradient(to ${direction}, ${color} ${scroll /
-              2}%,${gradientColor} ${scroll}%, transparent 0)`
+          ? `linear-gradient(to ${direction}, ${color} ${
+              scroll / 2
+            }%,${gradientColor} ${scroll}%, transparent 0)`
           : `linear-gradient(to ${direction}, ${color} ${scroll}%, transparent 0)`,
       }}
     />
   )
 }
-
-export default ProgressBar
