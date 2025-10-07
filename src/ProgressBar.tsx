@@ -23,23 +23,26 @@ export const ProgressBar: React.FC<Props> = ({
   const ticking = useRef(false)
 
   useEffect(() => {
+    const updateProgressBar = () => {
+      if (!ticking.current) {
+        const windowHeight =
+          document.documentElement.offsetHeight - window.innerHeight
+
+        window.requestAnimationFrame(() => {
+          setScroll(Math.floor((window.pageYOffset / windowHeight) * 100))
+          ticking.current = false
+        })
+      }
+      ticking.current = true
+    }
+
     document.addEventListener('scroll', updateProgressBar)
     updateProgressBar()
-    return () => document.removeEventListener('scroll', updateProgressBar)
-  }, [])
 
-  const updateProgressBar = () => {
-    if (!ticking.current) {
-      const windowHeight =
-        document.documentElement.offsetHeight - window.innerHeight
-
-      window.requestAnimationFrame(() => {
-        setScroll(Math.floor((window.pageYOffset / windowHeight) * 100))
-        ticking.current = false
-      })
+    return () => {
+      document.removeEventListener('scroll', updateProgressBar)
     }
-    ticking.current = true
-  }
+  }, [])
 
   return (
     <div
@@ -52,9 +55,8 @@ export const ProgressBar: React.FC<Props> = ({
         top: position === 'top' ? 0 : 'unset',
         bottom: position === 'bottom' ? 0 : 'unset',
         background: gradient
-          ? `linear-gradient(to ${direction}, ${color} ${
-              scroll / 2
-            }%,${gradientColor} ${scroll}%, transparent 0)`
+          ? `linear-gradient(to ${direction}, ${color} ${scroll / 2
+          }%,${gradientColor} ${scroll}%, transparent 0)`
           : `linear-gradient(to ${direction}, ${color} ${scroll}%, transparent 0)`,
       }}
     />
