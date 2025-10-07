@@ -41,14 +41,14 @@
   "homepage": "https://github.com/mleralec/react-progressbar-on-scroll#readme",
   "dependencies": {},
   "peerDependencies": {
-    "react": "^16.9.0 || ^17.0.0 || ^18.0.0"
+    "react": "^16.9.0 || ^17.0.0 || ^18.0.0 || ^19.0.0"
   },
   "devDependencies": {
-    "@types/react": "^18.0.9",
-    "@types/react-dom": "^18.0.5",
-    "react": "^18.1.0",
-    "release-it": "^15.0.0",
-    "typescript": "^4.7.2",
-    "vite": "^4.5.6"
+    "@types/react": "^19.2.2",
+    "@types/react-dom": "^19.2.1",
+    "react": "^19.2.0",
+    "release-it": "^19.0.5",
+    "typescript": "^5.9.3",
+    "vite": "^7.1.9"
   }
 }
